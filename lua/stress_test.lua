@@ -56,7 +56,8 @@ end
 
 function M.run_stress_test()
 	local file_path = vim.fn.input("Path to C++ file: ")
-	local function_name = "stress_fn"
+	local function_name = vim.fn.input("stress fn name: ")
+
 
 	local function_code, err = extract_function_code(file_path, function_name)
 	if not function_code then
